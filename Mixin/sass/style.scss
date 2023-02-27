@@ -1,0 +1,101 @@
+// MIXIN 
+//    Adalah kumpulan style yang dapat digunakan secara berulang-ulang,konsep mixin sama dengan function dibeberapa bahasa pemrograman yang lain
+// keywoard mixin
+    // - @mixin
+    //     Digunaka untuk membuat mixin
+    // - @include
+    //     Digunakan untuk memanggil mixin
+
+*{
+    margin: 0;
+    padding: 0;
+}
+$primary-color: #eaeaea;
+$secondr-color: darkblue;
+body{
+    background-color: $primary-color;
+    height: 100vh;
+    width: 100%;
+}
+
+// 1. MEMBUAT MIXIN TANPA PARAMETER
+@mixin style-navbar {
+    nav{
+        background-color: $secondr-color;
+        padding: 20px;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        overflow: hidden;
+        ul {
+            list-style-type: none;
+            display: flex;
+        }
+        li {
+          margin-right: 5px;
+        }
+        a {
+            text-decoration: none;
+            background-color: rgba(255,255,255,.1);
+            padding: 40px 20px;
+            color: white;
+        }
+        a:hover{
+            color: $secondr-color;
+            background-color: rgba(255,255,255,.8);
+        }
+    }
+  
+}
+
+@mixin style-main{
+    main{
+        padding: 20px;
+
+        h2{
+            font-size: 2.5rem;
+            text-align: center;
+            margin: 20px 50px 50px 50px;
+        }
+        p{
+            margin-top: 20px
+        }
+    }
+}
+.container{
+    //1. memanggil mixi harus menggunakan anda (),untuk menjalankann mixin
+    @include style-navbar();
+    @include style-main();
+}
+
+// 2. MEMBUAT MIXIN DENGAN PARAMETER
+// misal membuat mixin ,dengan property flex, ini konsepnya sama dengan funrtion,dimana kita dapat membuat parmeter 
+
+@mixin style-flex($space: center,$direction:row){
+// untuk menghindari jika user mengirimkan parameter yg kosong,maka kita bisa setting dengan nilai default pd parameter
+    display: flex;
+    justify-content: $space;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+
+footer{
+    $color-footer: grey;
+    background-color: $color-footer;
+    color: $secondr-color;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    ul{
+        // memnaggil mixin dengan parameter
+        @include style-flex(center, row);
+    }
+    li{
+        list-style-type: none;
+        margin-right: 20px;
+    }
+}
+

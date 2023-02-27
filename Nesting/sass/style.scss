@@ -1,0 +1,82 @@
+// 1. menulis syntax css pada nesting dengan format file .scss,maka setiap nnesting kita menuliskan tanda kurawal
+// .main{
+//     width: 100%;
+//     height: min-content;
+//     .main-header{
+//         h2{
+//             font-size: 2rem;
+//              color: salmon;
+//         }
+        
+//     }
+// }
+
+// 2. Mendaftarka selector css
+// .main,footer{
+//     h5{
+//         font-size: 2rem;
+//     }
+
+//     // maka kita bisa mendaftar selector css walaupun elemnt mempunyai parent yang berbeda
+//     // p {
+//     //     font-size: 1.4em;
+//     // }
+//     // syntax diatas jika dicompile ke vanilla css menjadi :
+//     // .main p{
+//     //     font-size: 1.4em;
+//     // }
+//     // footer p{
+//     //     font-size: 1.4em;
+//     // }
+// }
+
+// 3. KARAKTER (&) => PARENT SELECTOR
+    // A. kita bisa gunakan parent selector,untuk mentarget element parent didalam scope nesting
+    .main{
+        // & => akan mengacu pada selector parentnya (pada nesting ini,parent selectornya adalah .main
+        .container &{
+            background-color: salmon;
+        }
+        // syntax diatas menjadi
+        // .container .main{
+
+        // }
+    }
+
+    // B. Parent selector juga bisa gunakan untuk menambahkan pseudoclass
+    .main{
+        padding: 20px;
+        &:hover{
+            background-color: darkblue;
+            color: white;
+        }
+        // syntax diatas akan menjadi 
+        // .main:hover{
+        //     background-color: darkblue;
+        //     color: white;
+        // }
+    }
+
+    // C. Parent selector dapat mengenarate secara otomatis nama dari parent selectornya
+
+    .main{
+        & &-header{
+            font-style: italic;
+        }
+        // maka syntax diatas parent selector mengacu pd .main,sehingga
+        // .main .main-header{
+        //     font-style: italic;
+        // }
+    }
+
+    .footer{
+        & &-paragraph{
+            color: salmon;
+        }
+         // maka syntax diatas parent selector mengacu pd .footer,sehingga
+        //  .footer .footer-header{
+        //     font-style: italic;
+        // }
+    }
+// NOTE : Parent selector (&) digunakan saat kita menseleksi css tidak melakukan pemanggilan secar berulang-ulang
+//         Dan gunakan sesuai dengan kebutuhan

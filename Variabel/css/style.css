@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #eaeaea;
+}
+
+form {
+  background-color: white;
+  width: 400px;
+  padding: 20px;
+}
+form label {
+  display: block;
+  margin-top: 15px;
+}
+form button {
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  font-weight: 700;
+}
+
+form h2 {
+  color: darkblue;
+}
+
+form button {
+  background-color: green;
+}/*# sourceMappingURL=style.css.map */

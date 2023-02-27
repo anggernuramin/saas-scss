@@ -1,0 +1,75 @@
+// MEMBUAT VARIABEL PADA VANILLA CSS (SEBELUM ADANYA SASS)
+// :root{
+//     --primary-color: red;
+//     --secondary-color: #eaeaea;
+// }
+// arti syntax diatas adalah,semua elemen html mempunyai akses untuk diberi style dengan variabel diatas dan variabelnya bersifat global
+// cara pemanggilan variabel
+// body{
+//     background-color: var(--secondary-color);
+// }
+
+// MEMBUAT VARIABEL SETELAH ADANYA SAAS ($)
+$primer_color: #eaeaea;
+$secondary-color: darkblue;
+// 1.variabel diatas bersifat global
+// dan saat pembuatan variabel saas akan mengganggap sama tanda (-) dan(_) sama saja
+// cara memanggil variabel
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: $primer-color;;
+}
+
+// 2. Variabel local
+form{
+    $color-form: white;
+    // syntax diatas adalah variabel local,artinya variabel diatas hanya bisa diakses dalam lingkup ini saja (didalam kurung kurawal saat pemnbuatan variabel),tidak bisa diakses dari luar
+    background-color: $color-form;
+
+    // 3. memaksakan variabel local menjadi global (!global);
+    $color-text: darkblue !global;
+    // dengan keyword !global,maka artinya variabel diatas bisa diakses di global
+
+    width: 400px;
+    padding: 20px;
+    label{
+        display: block;
+        margin-top: 15px;
+    }
+    button{
+        margin-top: 20px;
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+        font-weight: 700;
+    }
+}
+
+form {
+    h2{
+        color: $color-text;
+    }
+}
+// 4. untuk menyimpan beberapa nilai ke dalam sebuah (map)
+$color-button: (
+                'succes' : green,
+                'failed' : red,
+                'warning' : orange
+);
+// arty syntax diatas membuat variabel color-button dan memeberi isi key dan value secara langsung
+form{
+    button{
+        // cara pemanggilan map (dengan memnaggil nama variabel,dan keynya)
+        background-color: map-get($map: $color-button, $key: 'succes');
+    }
+}
+
+

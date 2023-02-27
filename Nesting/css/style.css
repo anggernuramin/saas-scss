@@ -1,0 +1,19 @@
+.container .main {
+  background-color: salmon;
+}
+
+.main {
+  padding: 20px;
+}
+.main:hover {
+  background-color: darkblue;
+  color: white;
+}
+
+.main .main-header {
+  font-style: italic;
+}
+
+.footer .footer-paragraph {
+  color: salmon;
+}/*# sourceMappingURL=style.css.map */
