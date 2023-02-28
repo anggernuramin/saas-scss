@@ -44,9 +44,11 @@ nav{
 
 #content-center {
     width: 55vw;
+    overflow: hidden;
+    // overflow-y: auto;
     @include mixin.style-header();
+    background-color: blue;
     header{
-        background-color: blue;
         @include mixin.display-flex(space-between,row);
     }
     .box-search{
@@ -71,11 +73,15 @@ nav{
             i {
                 margin-right: 10px;
               font-size: 25px;
-              background-color: blue;
+              background-color:map-get( variables.$color-icon, 'succes');
               @include mixin.style-box(60px,60px);
               border-radius: 50%;
               @include mixin.display-flex(center,row);
             }
+            .fa-stethoscope{
+                background-color:map-get( variables.$color-icon, 'eye');
+            }
+
             .content-card{
                 p{
                     font-size: 12px;
@@ -90,7 +96,56 @@ nav{
         }
     }
     
+    .box-survey{
+        @include mixin.style-wrapper();
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .box-table{
+        @include mixin.style-wrapper();
+        table{
+            text-align: left;
+            width: 100%;
+            margin-top: 10px;
+
+
+            #profil-name{
+                @include mixin.display-flex(left);
+                img{
+                    @include mixin.style-img(23px,23px);
+                    margin-right: 10px;
+                }
+            }
+            td{
+                font-size: 14px;
+                font-weight: 600;
+                color: rgba($color: #000000, $alpha: .7);
+            }
+           
+            
+        }
+
+    }
+    
+    
    
+}
+
+#user{
+    width: 25vw;
+    padding: 37px 0px 80px 0px;
+    background-color: red;
+    .box-info-user{
+        @include mixin.display-flex();
+    }
+    
+    .box-detail-user{
+        @include mixin.style-box(100%,min-content);
+        background-color: variables.$secondary-color;
+    }
 }
 
 

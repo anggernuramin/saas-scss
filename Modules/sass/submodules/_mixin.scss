@@ -1,3 +1,4 @@
+@use 'variables';
 @mixin display-flex($space: center,$direction: row){
     display: flex;
     justify-content: $space;
@@ -33,5 +34,26 @@
 @mixin style-box($width,$height){
     width: $width;
     height: $height;
+}
+
+@mixin style-wrapper(){
+         margin-top: 30px;
+        background-color: variables.$primary-color;
+        border-radius: 10px;
+        overflow: hidden;
+        object-fit: cover;
+        padding: 20px;
+}
+
+@mixin style-img($width,$height){
+    background-color: variables.$secondary-color;
+    display: inline-block;
+    width: $width;
+    height: $height;
+    border-radius: 50%;
+    border: 1px solid black;
+    // outline: 0;
+    // border: 0;
+
 }
 
