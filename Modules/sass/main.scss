@@ -41,13 +41,17 @@ nav{
     }
 }
 
+.wrapper{
+    height: 100vh;
+    display: flex;
+    overflow-y: auto;
+}
 
 #content-center {
     width: 55vw;
-    overflow: hidden;
+    // overflow: hidden;
     // overflow-y: auto;
     @include mixin.style-header();
-    background-color: blue;
     header{
         @include mixin.display-flex(space-between,row);
     }
@@ -136,16 +140,135 @@ nav{
 
 #user{
     width: 25vw;
-    padding: 37px 0px 80px 0px;
-    background-color: red;
+    padding: 37px 30px 80px 30px;
     .box-info-user{
-        @include mixin.display-flex();
+        @include mixin.display-flex(right);
+
+        .box-notifikasi i{
+            background-color: variables.$primary-color;
+            margin-right: 10px;
+            @include mixin.style-img(30px,30px);
+            @include mixin.display-flex(center,row);
+            
+        }
+        .box-notifikasi{
+            position: relative;
+        }
+        .box-notifikasi::before{
+            content: '18';
+            font-size: 10px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 20px;
+            background-color: variables.$secondary-color;
+            @include mixin.style-img(20px,20px);
+            position: absolute;
+            @include mixin.position-right(-12px,5px);
+
+        }
+        .box-profil img{
+            @include mixin.style-img(30px,30px);
+        }
+       
     }
     
     .box-detail-user{
+        margin-top: 30px;
+        border-radius: 10px;
+        padding: 30px 20px;
         @include mixin.style-box(100%,min-content);
         background-color: variables.$secondary-color;
+        @include mixin.display-flex(center,column);
+
+        img{
+            margin-top: -15px;
+            @include mixin.style-img(40px,40px,2px,green);
+        }
+        .detail-user{
+            @include mixin.display-flex(center,column);
+
+            p{
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+            h5{
+                font-weight:500;
+            }
+            button{
+               @include mixin.style-button();
+
+            }
+        }
     }
+
+    .box-penyakit{
+        margin-top: 20px;
+        border-radius: 10px;
+        padding: 20px;
+        background-color: variables.$primary-color;
+
+        .box-keterangan-penyakit{
+            margin-top: 10px;
+            @include mixin.display-flex();
+            img{
+                width: 30px;
+                height: 30px;
+                margin-right: 10px;
+            }
+            h4{
+                font-weight: 600;
+            }
+
+            p{
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+            button{
+                @include mixin.style-button();
+            }
+            
+        }
+    }
+
+    .box-gender{
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        // @include mixin.style-box(100%);
+        background-color: variables.$primary-color;
+        .circle-gender{
+            margin: 10px 0;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            border-radius: 50%;
+            border-right: 30px solid blue;
+            @include mixin.display-flex();
+        }
+
+        .keterangan-gender{
+            @include mixin.display-flex(space-between);
+            font-size: 10px;
+            font-weight: bold;
+            span::before{
+                content: '';
+                @include mixin.style-img(10px,10px); 
+                margin-right: 10px;
+            }
+
+            .staff::before{
+    
+                background-color: map-get(variables.$color-icon, 'succes')
+            }
+            .female::before{
+                background-color: map-get(variables.$color-icon, 'close')
+            }
+            .male::before{
+                background-color: map-get(variables.$color-icon, 'eye')
+            }
+        }
+    }
+
 }
 
 

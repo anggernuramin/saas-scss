@@ -61,11 +61,15 @@ nav .nav-footer h4 {
   display: inline-block;
 }
 
+.wrapper {
+  height: 100vh;
+  display: flex;
+  overflow-y: auto;
+}
+
 #content-center {
   width: 55vw;
-  overflow: hidden;
   padding: 37px 40px 80px 40px;
-  background-color: blue;
 }
 #content-center header {
   display: flex;
@@ -165,12 +169,11 @@ nav .nav-footer h4 {
   align-items: center;
 }
 #content-center .box-table table #profil-name img {
-  background-color: #F8947C;
   display: inline-block;
   width: 23px;
   height: 23px;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1 solid black;
   margin-right: 10px;
 }
 #content-center .box-table table td {
@@ -181,18 +184,168 @@ nav .nav-footer h4 {
 
 #user {
   width: 25vw;
-  padding: 37px 0px 80px 0px;
-  background-color: red;
+  padding: 37px 30px 80px 30px;
 }
 #user .box-info-user {
+  display: flex;
+  justify-content: right;
+  flex-direction: row;
+  align-items: center;
+}
+#user .box-info-user .box-notifikasi i {
+  background-color: #FFFFFF;
+  margin-right: 10px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1 solid black;
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
 }
+#user .box-info-user .box-notifikasi {
+  position: relative;
+}
+#user .box-info-user .box-notifikasi::before {
+  content: "18";
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 20px;
+  background-color: #F8947C;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1 solid black;
+  position: absolute;
+  position: absolute;
+  top: -12px;
+  right: 5px;
+}
+#user .box-info-user .box-profil img {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1 solid black;
+}
 #user .box-detail-user {
+  margin-top: 30px;
+  border-radius: 10px;
+  padding: 30px 20px;
   width: 100%;
   height: -moz-min-content;
   height: min-content;
   background-color: #F8947C;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#user .box-detail-user img {
+  margin-top: -15px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid green;
+}
+#user .box-detail-user .detail-user {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#user .box-detail-user .detail-user p {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+#user .box-detail-user .detail-user h5 {
+  font-weight: 500;
+}
+#user .box-detail-user .detail-user button {
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: 0;
+  outline: 0;
+}
+#user .box-penyakit {
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #FFFFFF;
+}
+#user .box-penyakit .box-keterangan-penyakit {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+#user .box-penyakit .box-keterangan-penyakit img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+#user .box-penyakit .box-keterangan-penyakit h4 {
+  font-weight: 600;
+}
+#user .box-penyakit .box-keterangan-penyakit p {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+#user .box-penyakit .box-keterangan-penyakit button {
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: 0;
+  outline: 0;
+}
+#user .box-gender {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+}
+#user .box-gender .circle-gender {
+  margin: 10px 0;
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  border-radius: 50%;
+  border-right: 30px solid blue;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+#user .box-gender .keterangan-gender {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  font-size: 10px;
+  font-weight: bold;
+}
+#user .box-gender .keterangan-gender span::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1 solid black;
+  margin-right: 10px;
+}
+#user .box-gender .keterangan-gender .staff::before {
+  background-color: green;
+}
+#user .box-gender .keterangan-gender .female::before {
+  background-color: red;
+}
+#user .box-gender .keterangan-gender .male::before {
+  background-color: blue;
 }/*# sourceMappingURL=main.css.map */

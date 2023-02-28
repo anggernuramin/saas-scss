@@ -45,15 +45,21 @@
         padding: 20px;
 }
 
-@mixin style-img($width,$height){
-    background-color: variables.$secondary-color;
+@mixin style-img($width,$height,$border:1,$color:black){
+    // background-color: variables.$secondary-color;
     display: inline-block;
     width: $width;
     height: $height;
     border-radius: 50%;
-    border: 1px solid black;
-    // outline: 0;
-    // border: 0;
+    border: $border solid $color;
 
+}
+
+@mixin style-button(){
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 0;
+    outline: 0;
 }
 
