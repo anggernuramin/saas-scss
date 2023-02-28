@@ -1,0 +1,24 @@
+@use 'variables';
+@use 'mixin';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    background-color: variables.$background-body;
+}
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: no
+    ;
+}

@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  background-color: #F5F6F8;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: no;
+}
+
+nav {
+  position: relative;
+  width: 20vw;
+  height: 100vh;
+  background-color: #FFFFFF;
+}
+nav header {
+  text-align: center;
+  padding: 37px 40px 80px 40px;
+}
+nav a {
+  display: inline-block;
+  width: 260px;
+  padding: 10px;
+}
+nav a:hover {
+  background-color: #F8947C;
+}
+nav i {
+  margin-left: 20px;
+  margin-right: 15px;
+}
+nav .nav-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 10px;
+}
+nav .nav-footer i {
+  color: #F8947C;
+  display: inline-block;
+}
+nav .nav-footer h4 {
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+#content-center {
+  width: 55vw;
+  padding: 37px 40px 80px 40px;
+}
+#content-center header {
+  background-color: blue;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+#content-center .box-search {
+  position: relative;
+}
+#content-center .box-search input {
+  width: 300px;
+  height: 35px;
+  border-radius: 20px;
+  padding: 5px 5px 5px 15px;
+  border: 0;
+  outline: 0;
+}
+#content-center .box-search i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+#content-center .box-card {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+#content-center .box-card .card {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  width: 210px;
+  height: 100px;
+}
+#content-center .box-card .card i {
+  margin-right: 10px;
+  font-size: 25px;
+  background-color: blue;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+#content-center .box-card .card .content-card p {
+  font-size: 12px;
+  font-weight: 700;
+  margin: -10px 0 0 0;
+}
+#content-center .box-card .card .content-card span {
+  font-size: 20px;
+  font-weight: 400;
+}/*# sourceMappingURL=main.css.map */
