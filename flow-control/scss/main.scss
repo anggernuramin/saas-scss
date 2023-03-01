@@ -1,0 +1,17 @@
+@mixin style-img($size,$circle:false){
+    width: $size;
+    height: $size;
+    border: 2px solid black;
+    box-shadow: 1px 1px 3px rgba($color: #000000, $alpha: .5);
+    object-fit: cover;
+    @if $circle{
+        border-radius: 50%;
+    }
+}
+
+.circle{
+    @include style-img(100px,$circle:true);
+}
+.square{
+    @include style-img(100px, $circle:false )
+}
