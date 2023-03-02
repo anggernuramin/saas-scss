@@ -1,17 +1,156 @@
+// Flow control
+    // Adalah sebuah konsep untuk mnegatur alur kendali dari script sass
+    // A. FITUR PECABANGAN
+        // 1. @if
+        // 2. @else
+        // 3. @else if
+// membuat mixin untuk mengatur style profile
 @mixin style-img($size,$circle:false){
     width: $size;
     height: $size;
-    border: 2px solid green;
+    border: 2px solid black;
     box-shadow: 1px 1px 3px rgba($color: #000000, $alpha: .5);
     object-fit: cover;
+
+    // arti percabangan dibawah ini adalah jika circle: false (kode diatasnya teteap dijalankan
     @if $circle{
         border-radius: 50%;
     }
 }
 
-.circle{
-    @include style-img(100px,$circle:true);
+@mixin style-border($color,$direction){
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    border-color: transparent;
+    border-width: 2rem;
+    border-style: solid;
+
+    @if $direction == top{
+        // ingat border mengarah ke sumbu yang berlawanan
+        border-bottom-color: $color;
+    }@else if $direction == left{
+        border-right-color: $color;
+    }@else if $direction == bottom{
+        border-top-color: $color;
+    }@else {
+        // artinya jika parameter selain perbandingan diatas,artinya akan menjadi nilai defaultnya (parameter kosong/saat penulisan isi parameter)
+        border-left-color: $color;
+    }
 }
-.square{
-    @include style-img(100px, $circle:false )
+
+@mixin style-warna($size){
+    $lightMode-text: #000;
+    $lightMode-bg: #d4cbcb;
+    $darkMode-text: #fff;
+    $darkMode-bg: #000;
+
+    width: $size;
+    height: $size;
+    
+    @if $size < 200px{
+        background-color: $lightMode-bg;
+        color: $lightMode-text;
+    }@else {
+        background-color: $darkMode-bg;
+        color: $darkMode-text;
+    }
+}
+
+body{
+    display: flex;
+    justify-content: space-evenly;
+}
+.box-percabangan{
+    .box-image{
+        .circle{
+            @include style-img(100px,$circle:true);
+        }
+        .square{
+            @include style-img(100px, $circle:false )
+        }
+    }
+
+    .box-border{
+        .border{
+            @include style-border(red,rig);
+        }
+    }
+    
+    .box-warna{
+        .warna{
+            @include style-warna(100px);
+        }
+    }
+
+}
+
+.box-perulangan{
+    .box-gradasi{
+        .gradasi{
+            
+        // 1. MENGGUNAKAN FOR
+            // artinya variable i,adalah variabel yg akan iterasi,dimulai  dari angka 1 (tidak dimulai dengan angka 0)
+          @for $i from 1 to 11{
+            
+            // pemanggilan setiap iterasi(pengulangan harus menggunakan #{$namaVariable}
+            li:nth-child(#{$i}){
+                list-style: none;
+                // darken adalah built in modules(method) pd sass yg  digunakan untuk mengambil warna secara gelap sesuai dengan amount yg diisi
+                background-color: darken($color: orange, $amount: $i * 5%);
+                padding: 4px;
+                // kode diatas memmandfaatkan variabel i yg selalu berubah dan dikalikan dengan 6 untuk dijadikna nilai dari amount
+            
+           }
+
+        //2. MENGGUNAKA WHILE
+           $iterasi : 1;
+           @while $iterasi < 11{
+            background-color: lighten($color: darkblue, $amount: $iterasi * 2%);
+           }
+           @iterasi: $iterasi + 1;
+         }
+        }
+    }
+    .box-gradasi-link{
+        .link{
+            background-color: red;
+            ul{
+                list-style: none;
+
+                // membuat variable iterasi dan nilai awal
+                $iterasi: 1;
+                @while $iterasi < 11{
+                    li:nth-child(#{$iterasi}){
+                        background-color: lighten($color: red, $amount: $iterasi * 2%);
+                    }
+                    // kondisi incremenet
+                    $iterasi: $iterasi + 1;
+                }
+            }
+        }
+    }
+
+    .box-sosmed{
+    // each nniasanya digunaka untuk melooping variabel map(varibel yg mempunyai bnyak value)
+    $sosmed-color: (
+                    'youtube' : red,
+                    'whatsapp' : green,
+                    'instagram' : blue,
+                    'github' : black
+    );
+        .sosmed{
+            @each $social,$color in $sosmed-color{
+            // variabel $social : merepresentasikan key dan $color merepresentasikan valuenya pd variabel map $sosmed color
+
+            .#{$social}{
+            // dengan syntax diatas kita bisa menjadikan key untuk memangg
+                color: $color;
+                // sedangkan color akan menagmabil value dari variabel sosmed
+            }
+
+            }
+
+        }
+    }
 }
