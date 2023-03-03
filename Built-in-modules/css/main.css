@@ -1,0 +1,139 @@
+body {
+  width: 100%;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+header {
+  text-align: center;
+}
+
+main .list {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+main .list .left {
+  margin-right: 70px;
+}
+main .list .adjustColor p {
+  width: 200px;
+  height: 40px;
+  padding: 30px;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff9ed6;
+}
+main .list .adjustHue p {
+  width: 200px;
+  height: 40px;
+  padding: 30px;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fac472;
+}
+main .list .complement p {
+  width: 500px;
+  height: 40px;
+  padding: 30px;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+}
+main .list .darken p {
+  width: 400px;
+  height: 40px;
+  padding: 30px;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cc1b07;
+}
+main .list .lighten p {
+  width: 400px;
+  height: 40px;
+  padding: 30px;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+}
+main .list .saturate p {
+  width: 400px;
+  height: 40px;
+  padding: 30px;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #94e5ff;
+}
+main .list .desaturate p {
+  width: 400px;
+  height: 40px;
+  padding: 30px;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #383853;
+}
+main .list .grayscale p {
+  width: 450px;
+  height: 40px;
+  padding: 30px;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b6b6b6;
+}
+main .list .mix p {
+  width: 450px;
+  height: 40px;
+  padding: 30px;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 107, 0, 0.85);
+}
+main .list .fade-in p {
+  width: 600px;
+  height: 60px;
+  padding: 30px;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 21, 122, 0.7);
+}
+main .list .fade-out p {
+  width: 600px;
+  height: 60px;
+  padding: 30px;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 255, 0, 0.7);
+}/*# sourceMappingURL=main.css.map */

@@ -3,3 +3,121 @@
 // pada sass method ada banyak ,misal : color.list,map,math meta dll 
 
 // PADA MATERI INI AKA MEMEBAHAS METHOD COLOR pada SASS
+body{
+    width: 100%;
+    height: min-content;
+}
+@mixin size($lebar,$tinggi){
+    width: $lebar;
+    height: $tinggi;
+    padding: 30px;
+    margin: 0;
+    box-sizing: border-box;
+};
+@mixin flex-center(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+};
+$mainColor: salmon;
+header{
+    text-align: center
+}
+main{
+    .list{
+       display: flex;
+       justify-content: center;
+       align-items: start;
+        .left{
+            margin-right: 70px
+        }
+        .adjustColor{
+            p{
+            @include size(200px,40px);
+            @include flex-center();
+            background-color: adjust-color($mainColor,$red: 10, $green: 30,$blue: 100);
+            // parameter rgba(bisa menuliskan warna satu),ada juga hue,opacity yg dapat kita gunakan Dan hasil comple ke css adalah warna bbaru dengan hexadecimal
+            }
+        }
+        .adjustHue{
+            p{
+                @include size(200px, 40px);
+                @include flex-center();
+                background-color: adjust-hue($color: $mainColor, $degrees: 30deg);
+            }
+        }
+
+        .complement{
+            p{
+                @include size(500px, 40px);
+                @include flex-center();
+                background-color: complement($color: blue);
+            }
+        }
+
+        .darken{
+            p{
+                @include size(400px, 40px);
+                @include flex-center();
+                background-color: darken($color: $mainColor, $amount: 30%);
+            }
+        }
+
+        .lighten{
+            p{
+                @include size(400px, 40px);
+                @include flex-center();
+                background-color: lighten($color: black, $amount: 50%);
+            }
+        }
+
+        .saturate{
+            p{
+                @include size(400px, 40px);
+                @include flex-center();
+                background-color: saturate($color: lightblue, $amount: 70%);
+            }
+        }
+
+        .desaturate{
+            p{
+                @include size(400px, 40px);
+                @include flex-center();
+                background-color: desaturate($color: darkblue, $amount: 80%);
+            }
+        }
+
+        .grayscale{
+            p{
+                @include size(450px, 40px);
+                @include flex-center();
+                background-color: grayscale($color: salmon);
+            }
+        }
+
+        .mix{
+            p{
+                @include size(450px, 40px);
+                @include flex-center();
+                // background-color: mix($mainColor, yellow, $weight: 50%);
+                // rgba
+                background-color: mix(rgba(255,0,0,.7), orange, $weight: 50%);
+            }
+        }
+        .fade-in{
+            p{
+                @include size(600px, 60px);
+                @include flex-center();
+                background-color: fade-in(rgba(255,21,122,0), .7);
+            }
+        }
+
+        .fade-out{
+            p{
+                @include size(600px,60px);
+                @include flex-center();
+                background-color: fade-out(rgba(0,255,0,1.0), 0.3);
+            }
+        }
+    }
+}
