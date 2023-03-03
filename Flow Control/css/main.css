@@ -1,0 +1,182 @@
+body {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.box-percabangan .box-image .circle {
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.box-percabangan .box-image .square {
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.box-percabangan .box-border .border {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-color: transparent;
+  border-width: 2rem;
+  border-style: solid;
+  border-left-color: red;
+}
+.box-percabangan .box-warna .warna {
+  width: 100px;
+  height: 100px;
+  background-color: #d4cbcb;
+  color: #000;
+}
+
+.box-looping .box-gradasi .gradasi {
+  list-style-type: none;
+}
+.box-looping .box-gradasi .gradasi li:nth-child(1) {
+  padding: 5px;
+  background-color: #00ebeb;
+}
+.box-looping .box-gradasi .gradasi li:nth-child(2) {
+  padding: 5px;
+  background-color: #00d6d6;
+}
+.box-looping .box-gradasi .gradasi li:nth-child(3) {
+  padding: 5px;
+  background-color: #00c2c2;
+}
+.box-looping .box-gradasi .gradasi li:nth-child(4) {
+  padding: 5px;
+  background-color: #00adad;
+}
+.box-looping .box-gradasi .gradasi li:nth-child(5) {
+  padding: 5px;
+  background-color: #009999;
+}
+.box-looping .box-gradasi .gradasi li:nth-child(6) {
+  padding: 5px;
+  background-color: #008585;
+}
+.box-looping .box-gradasi .gradasi li:nth-child(7) {
+  padding: 5px;
+  background-color: #007070;
+}
+.box-looping .box-gradasi .gradasi li:nth-child(8) {
+  padding: 5px;
+  background-color: #005c5c;
+}
+.box-looping .box-gradasi .gradasi li:nth-child(9) {
+  padding: 5px;
+  background-color: #004747;
+}
+.box-looping .box-gradasi .gradasi li:nth-child(10) {
+  padding: 5px;
+  background-color: #003333;
+}
+.box-looping .box-gradasi-link .link {
+  list-style-type: none;
+}
+.box-looping .box-gradasi-link .link li a:nth-child(1) {
+  padding: 10px;
+  margin: 10px;
+  background-color: #00009f;
+  color: orange;
+  display: block;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.box-looping .box-gradasi-link .link li a:nth-child(2) {
+  padding: 10px;
+  margin: 10px;
+  background-color: #0000b4;
+  color: orange;
+  display: block;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.box-looping .box-gradasi-link .link li a:nth-child(3) {
+  padding: 10px;
+  margin: 10px;
+  background-color: #0000c8;
+  color: orange;
+  display: block;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.box-looping .box-gradasi-link .link li a:nth-child(4) {
+  padding: 10px;
+  margin: 10px;
+  background-color: #0000dd;
+  color: orange;
+  display: block;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.box-looping .box-gradasi-link .link li a:nth-child(5) {
+  padding: 10px;
+  margin: 10px;
+  background-color: #0000f1;
+  color: orange;
+  display: block;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.box-looping .box-gradasi-link .link li a:nth-child(6) {
+  padding: 10px;
+  margin: 10px;
+  background-color: #0606ff;
+  color: orange;
+  display: block;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.box-looping .box-gradasi-link .link li a:nth-child(7) {
+  padding: 10px;
+  margin: 10px;
+  background-color: #1b1bff;
+  color: orange;
+  display: block;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.box-looping .box-gradasi-link .link li a:nth-child(8) {
+  padding: 10px;
+  margin: 10px;
+  background-color: #2f2fff;
+  color: orange;
+  display: block;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.box-looping .box-gradasi-link .link li a:nth-child(9) {
+  padding: 10px;
+  margin: 10px;
+  background-color: #4444ff;
+  color: orange;
+  display: block;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.box-looping .box-sosmed .sosmed {
+  margin-top: -10px;
+  font-size: 2rem;
+  list-style: none;
+}
+.box-looping .box-sosmed .sosmed .youtube {
+  color: red;
+}
+.box-looping .box-sosmed .sosmed .whatsapp {
+  color: green;
+}
+.box-looping .box-sosmed .sosmed .instagram {
+  color: blue;
+}
+.box-looping .box-sosmed .sosmed .github {
+  color: black;
+}/*# sourceMappingURL=main.css.map */
